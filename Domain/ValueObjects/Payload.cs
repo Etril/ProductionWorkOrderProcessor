@@ -10,7 +10,7 @@ public class Payload
 
     public Payload (Guid productId, decimal quantity)
     {
-        if (ProductId == Guid.Empty) 
+        if (productId == Guid.Empty) 
         throw new ArgumentException("ProductId cannot be empty"); 
 
 
