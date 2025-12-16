@@ -1,5 +1,5 @@
 
-namespace Infrastructure.External;
+namespace Application.External;
 
 public record InventoryServiceResponse(
     bool isAvailable, 
