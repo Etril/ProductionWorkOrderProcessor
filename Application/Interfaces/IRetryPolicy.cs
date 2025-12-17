@@ -4,5 +4,5 @@ namespace Application.Interfaces;
 
 public interface IRetryPolicy
 {
-    Task <RetryExecuteResponse> ExecuteAsync(Func<Task> executeTask);
+    Task ExecuteAsync(Func<Task> executeTask);
 }
