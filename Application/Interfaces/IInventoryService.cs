@@ -1,5 +1,5 @@
 using Domain.ValueObjects;
-using Infrastructure.External;
+using Application.External;
 
 namespace Application.Interfaces;
 
