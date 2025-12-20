@@ -5,15 +5,20 @@ namespace Domain.Entities;
 
 public class ProductionWorkOrder
 {
+
+    private ProductionWorkOrder()
+    {
+        
+    }
     public Guid Id {get; private set;}
 
-    public IdempotencyKey IdemKey { get; private set; }
+    public IdempotencyKey IdemKey { get; private set; } = default!;
 
     public DateTime CreatedAt {get; private set;}
 
     public WorkOrderState State   { get; private set;}
 
-    public Payload Payload { get; private set; }
+    public Payload Payload { get; private set; } = default!;
 
     public string? FailureReason { get; private set; }
 

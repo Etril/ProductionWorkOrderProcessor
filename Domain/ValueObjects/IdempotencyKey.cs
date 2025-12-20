@@ -3,6 +3,11 @@ namespace Domain.ValueObjects;
 
 public class IdempotencyKey
 {
+
+    private IdempotencyKey()
+    {
+        
+    }
     public Guid Value {get;}
 
     public IdempotencyKey(Guid? value = null)

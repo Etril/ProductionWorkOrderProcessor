@@ -4,6 +4,11 @@ namespace Domain.ValueObjects;
 
 public class Payload
 {
+
+    private Payload ()
+    {
+        
+    }
     public Guid ProductId {get; }
 
     public decimal Quantity {get;}

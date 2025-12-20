@@ -14,7 +14,7 @@ public class AppDbContext: DbContext
     }
 
     public DbSet<ProductionWorkOrder> WorkOrders { get; set; }
-    public DbSet<IdempotencyKey> IdempotencyKeys { get; set; }
+    public DbSet<IdempotencyRecord> IdempotencyRecords { get; set; }
     public DbSet<DeadLetterRecord> DeadLetters { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -54,7 +54,7 @@ public class AppDbContext: DbContext
             });
         
 
-        modelBuilder.Entity<IdempotencyKey>(entity =>
+        modelBuilder.Entity<IdempotencyRecord>(entity =>
         {
             entity.HasKey(i => i.Value);
         });
